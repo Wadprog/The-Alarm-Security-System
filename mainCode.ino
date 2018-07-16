@@ -3,18 +3,17 @@
 #include<Keypad.h>
 #include <RFID.h>
 
-int h=0;
-// define constant interfaces. 
+// define constants.
+
 #define KEYPRESSED 1000
-#define BUZZER 0
+//#define BUZZER 0
 #define LED 1
 #define SS_PIN 10
 #define RST_PIN 9
 #define PWD_MAX_LENGTH 9 
 #define PWD_MIN_LENGTH 5
 #define Master_key  "321"
-#define SLAVE 7
-
+//security
 String default_password="123";
 int cards[][5] = {
   {5,117,21,219,190},
@@ -22,7 +21,6 @@ int cards[][5] = {
 };
 
 // Setting the LCD 
-
 const int  en = 2, rw = 1, rs = 0, d4 = 4, d5 = 5, d6 = 6, d7 = 7, bl = 3;
 const int i2c_addr = 0x3f;
 LiquidCrystal_I2C lcd(i2c_addr, en, rw, rs, d4, d5, d6, d7, bl, POSITIVE );
